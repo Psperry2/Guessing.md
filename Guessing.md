@@ -1,13 +1,12 @@
-   mermaid
-   flowchat TD
+flowchart TB
     A[Random Guessing Game] -->|computer selects range| B((computer selects random number within range))
     B ==> C{{User guesses number}}
-    C -.->|Guess is too high| D>Program outputs that the users guess was too high and to guess again]
+    C -.->|Guess is too high| D>Guess was too high, try again!]
      D -.-> |User guesses again| C
-    C ==>|User guesses correct number| E>Program outputs that user selected the correct number]
-    C -.->|Guess is too low| F>Program outputs that the users guess was too low and to guess again]
+    C ==>|User guesses correct number| E>You guessed correctly!]
+    C -.->|Guess is too low| F>Guess was too low, try again!]
     F -.-> |User guesses again| C
-    E ==> G[\Programs asks if user want to play again/]
+    E ==> G[\Do you want to play again?/]
     G ==> |User selects yes| B
     G ==> |User selects no| H[Game ends]
        

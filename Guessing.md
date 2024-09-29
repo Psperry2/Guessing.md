@@ -1,15 +1,18 @@
 ```mermaid
 flowchart TB
- A[Random Guessing Game] -->|computer selects range| B((computer selects random number within range))
- B ==> C{{User guesses number}}
- C -.->|Guess is too high| D>Guess was too high, try again!]
- D -.-> |User guesses again| C
- C ==>|User guesses correct number| E>You guessed correctly!]
- C -.->|Guess is too low| F>Guess was too low, try again!]
- F -.-> |User guesses again| C
- E ==> G[\Do you want to play again?/]
- G ==> |User selects yes| B
- G ==> |User selects no| H[Game ends]
+    A[Program selects range] -.- B[Program selects a random number within the range ]
+    B ====o |Program prompts user to guess a number within the range| C{{User guesses number}}
+       C -.-> |Guess is out of range| D[\Guess was not in range, try again!/]
+       D -.-> |User guesses again| C
+    C -.->|Guess is too high| E>Guess was too high, try again!]
+    E -.- |User guesses again| C
+    C -.->|Guess is too low| F>Guess was too low, try again!]
+    F -.-> |User guesses again| C
+    C ===> |Guess is correct| P[\You guessed correctly!/]
+    P -.-> |Would you like to play again?| R[No] 
+    R -.-> Q[Game ends]
+    P ===> |Would you like to play again?| M[Yes]
+    M ==oB
 ```
     
 ### Number Guessing Game Flow Chart Description

@@ -3,11 +3,11 @@ flowchart TB
     A[Program selects range] -.- B[Program selects a random number within the range ]
     B ====o |Program prompts user to guess a number within the range| C{{User guesses number}}
        C -.-> |Guess is out of range| D[\Guess was not in range, try again!/]
-       D -.-> |Prompt user to guess again| C
+       D -.-> C
     C -.->|Guess is too high| E>Guess was too high, try again!]
-    E -.- |Prompt user to guess again| C
+    E -.- C
     C -.->|Guess is too low| F>Guess was too low, try again!]
-    F -.-> |Prompt user to guess again| C
+    F -.-> C
     C ===> |Guess is correct| P[\You guessed correctly!/]
     P -.-> |Would you like to play again?| R[No] 
     R -.-> Q[Game ends]

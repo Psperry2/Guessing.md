@@ -18,6 +18,9 @@ flowchart TB
 ### Number Guessing Game Flow Chart Description
  1. The program must pick a **random** number within a selected range.
  2. The user is prompted to guess the random number selected by the program
+    - **If the user selects a number thats out of range.**
+        1. The program lets the user know that the value they selected was out of range.
+        2. The program prompts the user to try again.
     - **If the user selects a number thats too high.**
         1. The program lets the user know that the value they selected was too high.
         2. The program prompts the user to try again.

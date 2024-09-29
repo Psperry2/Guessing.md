@@ -1,3 +1,4 @@
+   mermaid
 flowchart TB
     A[Random Guessing Game] -->|computer selects range| B((computer selects random number within range))
     B ==> C{{User guesses number}}
@@ -9,7 +10,8 @@ flowchart TB
     E ==> G[\Do you want to play again?/]
     G ==> |User selects yes| B
     G ==> |User selects no| H[Game ends]
-       
+    
+   
 ### Number Guessing Game Flow Chart Description
  1. The program must pick a **random** number within a selected range.
  2. The user is prompted to guess the random number selected by the program

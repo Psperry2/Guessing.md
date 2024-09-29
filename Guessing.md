@@ -1,15 +1,7 @@
    mermaid
 flowchart TD
- A[Random Guessing Game] -->|computer selects range| B((computer selects random number within range))
- B ==> C{{User guesses number}}
- C -.->|Guess is too high| D>Guess was too high, try again!]
- D -.-> |User guesses again| C
- C ==>|User guesses correct number| E>You guessed correctly!]
- C -.->|Guess is too low| F>Guess was too low, try again!]
- F -.-> |User guesses again| C
- E ==> G[\Do you want to play again?/]
- G ==> |User selects yes| B
- G ==> |User selects no| H[Game ends]
+    Start[[Start]] --> End[[End]]
+    
 
     
 ### Number Guessing Game Flow Chart Description
